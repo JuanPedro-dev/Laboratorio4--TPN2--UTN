@@ -38,7 +38,40 @@
 
 
     <script>
-        
+        /**
+            // Clase del ejercicio 2 (el ejercicio 1 no está relacionado)
+            class Libro {
+            
+            constructor(title, author, releaseDate){
+                this._title = title;
+                this._author = author;
+                this._releaseDate = releaseDate;
+            }
+            // Podría usar getters para usarlos más abajo
+            show = () => {
+                console.log(`Title: ${this._title} \nAuthor: ${this._author} \nReleaseDate: ${this._releaseDate}`);
+            }
+
+            showByAlert = () =>{
+                alert(`Title: ${this._title} \nAuthor: ${this._author} \nReleaseDate: ${this._releaseDate}`);
+            }
+        }
+        */
+
+        class Libro {
+            
+            constructor(title, author, releaseDate){
+                this._title = title;
+                this._author = author;
+                this._releaseDate = releaseDate;
+            }
+
+            showDetails() { alert(`Title: ${this._title} \nAuthor: ${this._author} \nReleaseDate: ${this._releaseDate}`); }
+        }
+
+         
+
+
     </script>
 </body>
 </html>
