@@ -1,13 +1,14 @@
-<h1 style="text-align:center">  💻 Laboratorio 4 - TP Nº 2💻  </h1>
+<h1 align="center"> 💻 Laboratorio 4 - TP Nº 2💻  </h1> 
+<hr> 
 
 Tecnicatura Universitaria en Programación (UTN): vemos las herramientas, tecnologías y lenguajes básicos en el desarrollo web. 
 <br> 
 Este trabajo práctico esta enfocado en creación de Objetos, Clases y bases de javascript. 
-Algunos Ejercicio puede que tengan más de un proyecto a modo de ejercitar manejo del DOM, diseño u otros conceptos. 
+Algunos ejercicios, puede que tengan más de un proyecto a modo de ejercitar manejo del DOM, diseño u otros conceptos. 
 
 ⚠️ ***Ignore completamente este proyecto.*** ⚠️
 
-<h2 style="text-align:center">📋 TP Nº 2 - Objetos y Clases 📋 </h2>
+<h2 align="center"> 📋 TP Nº 2 - Objetos y Clases 📋 </h2>
 
 #### 1- Crear un objeto y mostrar propiedades
 Crea un objeto que represente a una persona con propiedades como nombre, edad y profesión. Luego, muestra estas propiedades utilizando alert.

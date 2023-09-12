@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Trionfini Juan Pedro">
+    <meta name="description" content="
+        Crea un array de nombres y utiliza el método map para convertir todos los nombres a mayúsculas. Luego, muestra los nombres en mayúsculas utilizando alert.
+    ">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+    
+    <main class="container">
+        <h1> Ejercicio 6</h1>
+        <p> <strong>6: Map para nombres en mayúsculas</strong></p>
+        <p>Crea un array de nombres y utiliza el método map para convertir todos los nombres a mayúsculas. Luego, muestra los nombres en mayúsculas utilizando alert.</p>
+        <div id="response">
+            <h3>Los nombres son: </h3>
+        </div>
+    </main>
+
+
+    <script>
+        const response = document.getElementById("response"); 
+
+        const arrayOfNames = ["Juan", "Paco", "Pedro", "DeLaMar"];
+        const arrayOfNamesUppercase = arrayOfNames.map( name => name.toUpperCase() ); 
+        arrayOfNamesUppercase.map( name => alert(name) ); 
+        
+        
+        // Add to DOM
+        const fragment = document.createDocumentFragment(); 
+
+        arrayOfNamesUppercase.forEach( (name) => {
+            const li = document.createElement('li'); 
+            li.textContent = name; 
+            fragment.appendChild(li);
+        }); 
+
+        response.appendChild(fragment); 
+        
+    </script>
+</body>
+</html>

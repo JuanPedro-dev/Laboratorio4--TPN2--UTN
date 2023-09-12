@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Trionfini Juan Pedro">
+    <meta name="description" content="
+    Crea un array de números y utiliza el método find para buscar un número específico ingresado por el usuario utilizando un prompt. Si el número se encuentra, muestra un mensaje utilizando alert
+    ">
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+    
+    <main class="container">
+        <h1> Ejercicio 7</h1>
+        <p> <strong>7: Encontrar un número en un array</strong></p>
+        <p> Crea un array de números y utiliza el método find para buscar un número específico ingresado por el usuario utilizando un prompt. Si el número se encuentra, muestra un mensaje utilizando alert</p>
+        <div>
+            <h3>El número: <span id="response"></span></h3>
+        </div>
+    </main>
+
+
+    <script>
+        const response = document.getElementById("response"); 
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7]; 
+        const numberToFind = prompt('Introduce el numero a buscar:'); 
+        const result = numbers.find( number => number == numberToFind ); 
+        alert(` ${result == undefined ? "👎: NO se encuentra" : "👍: Se encuentra"} `)
+
+        response.innerHTML = `${numberToFind} ${result == undefined ? "👎- NO se encuentra" : "👍- Se encuentra"} `
+        
+    </script>
+</body>
+</html>
