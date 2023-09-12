@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Trionfini Juan Pedro">
+    <meta name="description" content="
+        2- Clase de Libro
+        Crea una clase llamada 'Libro' que tenga propiedades como título, autor y año de
+        publicación. Crea un método que muestre la información del libro en un formato
+        legible y utiliza prompts para obtener la información del usuario. Luego, crea una
+        instancia de la clase y muestra la información utilizando alert.">
+
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    
+    <main class="container">
+        <h1> Ejercicio 2 </h1>
+        <p> <strong>2: Clase de Libro</strong></p>
+        <p>Crea una clase llamada 'Libro' que tenga propiedades como título, autor y año de publicación. Crea un método que muestre la información del libro en un formato legible y utiliza prompts para obtener la información del usuario. Luego, crea una instancia de la clase y muestra la información utilizando alert.
+        </p>
+        <div id="response"></div>
+        
+
+    </main>
+
+
+    <script>
+        class Libro {
+            
+            constructor(title, author, releaseDate){
+                this._title = title;
+                this._author = author;
+                this._releaseDate = releaseDate;
+            }
+            // Podría usar getters para usarlos más abajo
+            show = () => {
+                console.log(`Title: ${this._title} \nAuthor: ${this._author} \nReleaseDate: ${this._releaseDate}`);
+            }
+
+            showByAlert = () =>{
+                alert(`Title: ${this._title} \nAuthor: ${this._author} \nReleaseDate: ${this._releaseDate}`);
+            }
+        }
+
+        const librito = new Libro('Titulo del Libro', 'Autor del Libro', 'Fecha de publicación del Libro'); 
+
+        librito.show();
+
+        const libritoParaMostrar = new Libro(prompt("Nombre:"), prompt("Autor:"), prompt("Año de Publicación:"))
+
+        libritoParaMostrar.showByAlert(); 
+
+        const response = document.getElementById('response'); 
+
+        response.innerHTML = `<h3><strong>Respuesta: </strong></h3>
+        <pre>
+            Título: ${libritoParaMostrar._title}
+            Autor: ${libritoParaMostrar._author} 
+            Año de liberación: ${libritoParaMostrar._releaseDate}
+        </pre>`
+
+    </script>
+
+
+
+</body>
+</html>

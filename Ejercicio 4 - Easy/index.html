@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Trionfini Juan Pedro">
+    <meta name="description" content="
+        4- Herencia con Superhéroes
+            Crea una clase base llamada Superheroe con los siguientes métodos:
+            constructor(nombre, poder): Inicializa el nombre y el poder del superhéroe.
+            presentarse(): Muestra un alert con el nombre del superhéroe y su poder.
+            Crea una clase que herede de Superheroe llamada Villano con un método adicional:
+            constructor(nombre, poder, plan): Inicializa el nombre, poder y plan del villano.
+            amenazar(): Muestra un alert con el plan del villano.
+            Crea instancias de ambas clases utilizando datos ingresados por el usuario a través de prompts y muestra sus presentaciones y amenazas respectivas.    
+    ">
+
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    
+    <main class="container">
+        <h1> Ejercicio 4 </h1>
+        <p> <strong>4: Herencia con Superhéroes</strong></p>
+        <pre>
+Crea una clase base llamada Superheroe con los siguientes métodos:
+constructor(nombre, poder): Inicializa el nombre y el poder del superhéroe.
+presentarse(): Muestra un alert con el nombre del superhéroe y su poder.
+Crea una clase que herede de Superheroe llamada Villano con un método adicional:
+constructor(nombre, poder, plan): Inicializa el nombre, poder y plan del villano.
+amenazar(): Muestra un alert con el plan del villano.
+Crea instancias de ambas clases utilizando datos ingresados por el usuario a través de prompts y muestra sus presentaciones y amenazas respectivas.    
+        </pre>
+        <div id="response"></div>
+        
+
+    </main>
+
+
+    <script>
+        class Superheroe{
+            constructor(name, power){
+                this._name = name; 
+                this._power = power;
+            }
+
+            get name(){ return this._name;}
+            get power(){ return this._power;}
+
+            set name(name){ this._name = name } 
+            set power(power) { this._power = power}
+            
+            presentarse(){ 
+                alert(`Name: ${this.name} -- Power: ${this.power}`) 
+            }
+        }
+        
+        class Villano extends Superheroe{
+
+            constructor(name, power, plan){
+                super(name, power); 
+                this._plan = plan;
+            }
+
+            get plan() { return this._plan }
+
+            set plan(plan) { this._plan = plan }
+
+            amenazar(){
+                alert(`Plan: ${this.plan} `)
+            }
+        }
+ 
+        let hero = new Superheroe("Juan", "volar")
+        let superVillano = new Villano("Pedro", "robar", "robar el museo") 
+
+        hero.presentarse(); 
+        superVillano.amenazar();
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Trionfini Juan Pedro">
+    <meta name="description" content="
+        3- Crear una Clase y sus Métodos
+            Utiliza la clase generada en el punto 1 añadiendo los siguientes métodos:
+            constructor(nombre, edad, profesión): Inicializa el nombre, la edad de la persona y su profesión.
+            saludar(): Muestra un saludo en un alert que incluya el nombre y la edad de la persona.
+            Luego, crea una instancia de la clase Persona utilizando los datos proporcionados por el usuario a través de prompts y muestra el saludo utilizando el método saludar().
+    ">
+
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    
+    <main class="container">
+        <h1> Ejercicio 3 </h1>
+        <p> <strong>3: Crear una Clase y sus Métodos</strong></p>
+        <pre>
+Utiliza la clase generada en el punto 1 añadiendo los siguientes métodos:
+constructor(nombre, edad, profesión): Inicializa el nombre, la edad de la persona y su profesión.
+saludar(): Muestra un saludo en un alert que incluya el nombre y la edad de la persona.
+Luego, crea una instancia de la clase Persona utilizando los datos proporcionados por el usuario a través de prompts y muestra el saludo utilizando el método saludar().
+        </pre>
+        <div id="response"></div>
+        
+
+    </main>
+
+
+    <script>
+        /** Objeto Generado en el punto 1: 
+        const objPersona = {
+            name: "Juan",
+            age: 31,
+            profession : "OTM Consultant",
+        }
+        */ 
+
+        class Persona  {
+            constructor(name, age, profession){
+                this._name = name,
+                this._age = age,
+                this._profession = profession
+            };      
+                  
+            get name(){
+                return this._name;
+            };
+
+            get age(){
+                return this._age;
+            };
+
+            get profession(){
+                return this._profession;
+            };
+
+            set name(name){
+                this._name = name;
+            };
+
+            set age(age){
+                this._age = age;
+            };
+
+            set profession(profession){
+                this._profession = profession;
+            };
+            saludar(){
+                alert(`Hello ${this.name}, you are ${this.age}`)
+            }
+        }
+
+        let juan = new Persona ("Juan",31, "OTM Consult");
+        juan.saludar();
+
+
+    </script>
+
+
+
+</body>
+</html>

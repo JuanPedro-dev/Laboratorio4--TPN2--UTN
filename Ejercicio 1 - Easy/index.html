@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Trionfini Juan Pedro">
+    <meta name="description" content="
+    1- Crear un objeto y mostrar propiedades
+    Crea un objeto que represente a una persona con propiedades como nombre, edad y
+    profesión. Luego, muestra estas propiedades utilizando alert.">
+
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    
+    <main class="container">
+        <h1> Ejercicio 1 </h1>
+        <p> 1- Crear un objeto y mostrar propiedades:</p>
+        <p> Crea un objeto que represente a una persona con propiedades como nombre, edad y profesión. Luego, muestra estas propiedades utilizando alert. </p>
+        
+    </main>
+
+
+    <script>
+        const objPersona = {
+            name: "Juan",
+            age: 31,
+            profession : "OTM Consultant",
+        }
+
+        console.log(objPersona); 
+
+        for (const prop in objPersona) {
+            alert(`${prop}: ${objPersona[prop]}`); 
+        }
+
+        document.write(`<h3> <strong>Resultado: </strong></h3>`);
+
+        for (const prop in objPersona) {
+            document.write(`<p> ${prop}: ${objPersona[prop]} </p>`); 
+        }
+
+    </script>
+
+
+
+</body>
+</html>
